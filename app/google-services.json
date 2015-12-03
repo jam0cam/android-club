@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_id": "androidclub-2adb2",
-    "project_number": "358155172649",
-    "name": "androidclub"
+    "project_id": "handyandroidclub",
+    "project_number": "977176967003",
+    "name": "HandyAndroidClub"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:358155172649:android:7795614b22f48986",
+        "mobilesdk_app_id": "1:977176967003:android:7795614b22f48986",
         "client_id": "android:com.handy.androidclub",
         "client_type": 1,
         "android_client_info": {
@@ -16,11 +16,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "358155172649-44bc774573ah9efq1dmm5hj5pjbp33vu.apps.googleusercontent.com",
+          "client_id": "977176967003-k4du0hd8bn9tll8ct5u4b0ld5ubncqjr.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.handy.androidclub",
-            "certificate_hash": "3528B7EF29B7F2984B10B77F75EFC75FC6DA2BFB"
+            "certificate_hash": "FA7E9FF1642242777D2731C33D094325D907303E"
           }
         }
       ],
@@ -29,7 +29,7 @@
         "analytics_service": {
           "status": 2,
           "analytics_property": {
-            "tracking_id": "UA-70957940-1"
+            "tracking_id": "UA-70958758-1"
           }
         },
         "cloud_messaging_service": {

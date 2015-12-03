@@ -9,12 +9,13 @@
             keyPassword "handyrules"
         }
     }
-**SHA-1** 35:28:B7:EF:29:B7:F2:98:4B:10:B7:7F:75:EF:C7:5F:C6:DA:2B:FB
+**SHA-1** FA:7E:9F:F1:64:22:42:77:7D:27:31:C3:3D:09:43:25:D9:07:30:3E
 
 ### Cloud Messaging
-**Server API KEY:** AIzaSyD0QzbaVCgqSPp-FYmUFlTZ9hczDlmDhYo
-**Sender ID:** 358155172649
+**Server API KEY:** AIzaSyAtNAD3rpcF7cuck1XxA8VOIGmKMaCZjVI
+**Sender ID:** 977176967003
 
 ### Analytics
-**Analytics tracking ID:** UA-70957940-1
-**Analytics Property:** androidclub Android: com.handy.androidclub
+**Google Analytics Account** odolejsi@handybook.com Apps
+**Analytics tracking ID:** UA-70958758-1
+**Analytics Property:** HandyAndroidClub Android: com.handy.androidclub
