@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_id": "androidclub-2adb2",
+    "project_number": "358155172649",
+    "name": "androidclub"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358155172649:android:7795614b22f48986",
+        "client_id": "android:com.handy.androidclub",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.handy.androidclub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358155172649-44bc774573ah9efq1dmm5hj5pjbp33vu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.handy.androidclub",
+            "certificate_hash": "3528B7EF29B7F2984B10B77F75EFC75FC6DA2BFB"
+          }
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 2,
+          "analytics_property": {
+            "tracking_id": "UA-70957940-1"
+          }
+        },
+        "cloud_messaging_service": {
+          "status": 2,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": []
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 2,
+          "test_banner_ad_unit_id": "ca-app-pub-3940256099942544/6300978111",
+          "test_interstitial_ad_unit_id": "ca-app-pub-3940256099942544/1033173712"
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}
