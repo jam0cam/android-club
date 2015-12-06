@@ -2,9 +2,13 @@ package com.handy.androidclub.core;
 
 import android.app.Application;
 
+import com.crashlytics.android.Crashlytics;
+import com.facebook.FacebookSdk;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 import com.handy.androidclub.R;
+
+import io.fabric.sdk.android.Fabric;
 
 /**
  * This is a subclass of {@link Application} used to provide shared objects for this app.
@@ -25,7 +29,18 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        initializeFabric();
+        initializeFacebookSdk();
         initializeAnalytics();
+        registerActivityLifecycleCallbacks(ActivityLifecycleCallbacksListener.get());
+    }
+
+    private void initializeFacebookSdk() {
+        FacebookSdk.sdkInitialize(getApplicationContext());
+    }
+
+    private Fabric initializeFabric() {
+        return Fabric.with(this, new Crashlytics());
     }
 
     private void initializeAnalytics() {
