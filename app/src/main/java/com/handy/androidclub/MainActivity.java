@@ -58,15 +58,12 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onResume() {
         super.onResume();
-        // Logs 'install' and 'app activate' App Events.
         AppEventsLogger.activateApp(this);
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-
-        // Logs 'app deactivate' App Event.
         AppEventsLogger.deactivateApp(this);
     }
 
@@ -82,7 +79,6 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -93,8 +89,6 @@ public class MainActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             App.tracker().send(new HitBuilders.EventBuilder("ui", "open")
                     .setLabel("settings")
@@ -108,23 +102,15 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        // Handle navigation drawer item clicks here.
         int id = item.getItemId();
-
         if (id == R.id.nav_camera) {
-            // Handle the camera action
         } else if (id == R.id.nav_gallery) {
-
         } else if (id == R.id.nav_slideshow) {
-
         } else if (id == R.id.nav_manage) {
-
         } else if (id == R.id.nav_share) {
-
         } else if (id == R.id.nav_send) {
-
         }
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
