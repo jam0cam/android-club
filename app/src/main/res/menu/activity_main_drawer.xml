@@ -3,6 +3,34 @@
 
     <group android:checkableBehavior="single">
         <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home_black_24dp"
+            android:title="Home"/>
+        <item
+            android:id="@+id/nav_one"
+            android:icon="@drawable/ic_menu_number_1_black_24dp"
+            android:title="Red"/>
+        <item
+            android:id="@+id/nav_two"
+            android:icon="@drawable/ic_menu_number_2_black_24dp"
+            android:title="Green"/>
+        <item
+            android:id="@+id/nav_three"
+            android:enabled="false"
+            android:icon="@drawable/ic_menu_number_3_black_24dp"
+            android:title="Blue"/>
+        </group>
+        <group
+            android:checkableBehavior="all">
+            <item
+                android:id="@+id/nav_recycler"
+                android:icon="@drawable/ic_menu_recycler_view_black_24dp"
+                android:title="RecyclerView Demo"/>
+        </group>
+
+        <group
+            android:visible="false">
+        <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_menu_camera"
             android:title="Import"/>
