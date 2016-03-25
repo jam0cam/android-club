@@ -1,8 +1,10 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-             xmlns:tools="http://schemas.android.com/tools"
-             android:id="@+id/big_text_frame"
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
+<FrameLayout
+    android:id="@+id/big_text_frame"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
     tools:context=".core.MainActivity"
     >
 
@@ -13,6 +15,7 @@
         android:layout_margin="32dp"
         android:gravity="center_horizontal"
         android:textSize="36sp"
-        tools:text="Example Text"/>
+        tools:text="Example Text"
+        />
 
 </FrameLayout>

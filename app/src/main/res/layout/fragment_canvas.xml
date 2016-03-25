@@ -3,8 +3,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/white"
     android:orientation="vertical"
-    android:padding="@dimen/default_margin"
+    android:padding="@dimen/default_margin_padding"
     >
 
     <com.handy.androidclub.canvas.CanvasView
