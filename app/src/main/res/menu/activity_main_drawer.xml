@@ -7,9 +7,10 @@
             android:icon="@drawable/ic_menu_home_black_24dp"
             android:title="Home"/>
         <item
-            android:id="@+id/nav_one"
+            android:id="@+id/nav_canvas"
             android:icon="@drawable/ic_menu_number_1_black_24dp"
-            android:title="Red"/>
+            android:title="Canvas"
+            />
         <item
             android:id="@+id/nav_two"
             android:icon="@drawable/ic_menu_number_2_black_24dp"

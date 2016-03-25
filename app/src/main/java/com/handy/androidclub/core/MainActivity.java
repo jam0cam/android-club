@@ -20,8 +20,8 @@ import android.view.View;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.handy.androidclub.R;
+import com.handy.androidclub.canvas.CanvasFragment;
 import com.handy.androidclub.view.fragment.GreenFragment;
-import com.handy.androidclub.view.fragment.RedFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -131,8 +131,8 @@ public class MainActivity extends AppCompatActivity
                 swapFragment(HomeFragment.newInstance("Welcome"));
                 mPreviousSelectedMenuItem = item.getItemId();
                 break;
-            case R.id.nav_one:
-                swapFragment(new RedFragment());
+            case R.id.nav_canvas:
+                swapFragment(new CanvasFragment());
                 mPreviousSelectedMenuItem = item.getItemId();
                 break;
             case R.id.nav_two:
