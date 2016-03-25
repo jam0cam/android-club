@@ -1,4 +1,4 @@
-package com.handy.androidclub.view.activity;
+package com.handy.androidclub.core;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -20,16 +20,14 @@ import android.view.View;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.handy.androidclub.R;
-import com.handy.androidclub.core.App;
 import com.handy.androidclub.view.fragment.GreenFragment;
-import com.handy.androidclub.view.fragment.HomeFragment;
 import com.handy.androidclub.view.fragment.RedFragment;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    FragmentManager mFragmentManager = getSupportFragmentManager();
-    int mPreviousSelectedMenuItem = 0;
+    private FragmentManager mFragmentManager = getSupportFragmentManager();
+    private int mPreviousSelectedMenuItem = 0;
     private DrawerLayout mDrawer;
     private NavigationView mNavigationView;
 
@@ -64,21 +62,19 @@ public class MainActivity extends AppCompatActivity
         mNavigationView = (NavigationView) findViewById(R.id.nav_view);
         mNavigationView.setNavigationItemSelectedListener(this);
 
-        FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        FragmentTransaction fragmentTransaction = mFragmentManager.beginTransaction();
         fragmentTransaction.add(
                 R.id.fragment_container,
                 HomeFragment.newInstance("Welcome Home"),
-                HomeFragment.TAG
+                HomeFragment.class.getSimpleName()
         );
         fragmentTransaction.commit();
-
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
+        if (mDrawer.isDrawerOpen(GravityCompat.START)) {
+            mDrawer.closeDrawer(GravityCompat.START);
         } else {
             if (mFragmentManager.getBackStackEntryCount() > 0) {
                 String title = mFragmentManager
@@ -114,26 +110,23 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            App.tracker().send(new HitBuilders.EventBuilder("ui", "open")
-                    .setLabel("settings")
-                    .build());
-            return true;
+        switch (id) {
+            case R.id.action_settings:
+                App.tracker().send(new HitBuilders.EventBuilder("ui", "open")
+                        .setLabel("settings")
+                        .build());
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
         }
-
-        return super.onOptionsItemSelected(item);
     }
 
-    @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         // Handle navigation drawer item clicks here.
         int id = item.getItemId();
-        switch (id){
+        switch (id) {
             case R.id.nav_home:
                 swapFragment(HomeFragment.newInstance("Welcome"));
                 mPreviousSelectedMenuItem = item.getItemId();
@@ -160,7 +153,7 @@ public class MainActivity extends AppCompatActivity
                         android.support.design.R.anim.abc_slide_out_top,
                         android.support.design.R.anim.abc_slide_in_top,
                         android.support.design.R.anim.abc_slide_out_bottom
-                        )
+                )
                 .replace(R.id.fragment_container, newFragment)
                 .addToBackStack(Integer.toString(mPreviousSelectedMenuItem))
                 .commit();

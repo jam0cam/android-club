@@ -3,7 +3,8 @@
              android:id="@+id/big_text_frame"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".view.activity.MainActivity">
+    tools:context=".core.MainActivity"
+    >
 
     <TextView
         android:id="@+id/big_text_text"

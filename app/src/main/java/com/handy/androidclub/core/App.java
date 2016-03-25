@@ -32,7 +32,6 @@ public class App extends Application {
         initializeFabric();
         initializeFacebookSdk();
         initializeAnalytics();
-        registerActivityLifecycleCallbacks(ActivityLifecycleCallbacksListener.get());
     }
 
     private void initializeFacebookSdk() {

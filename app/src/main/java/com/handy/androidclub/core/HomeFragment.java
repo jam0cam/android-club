@@ -1,4 +1,4 @@
-package com.handy.androidclub.view.fragment;
+package com.handy.androidclub.core;
 
 
 import android.os.Bundle;
@@ -11,8 +11,6 @@ import android.widget.TextView;
 import com.handy.androidclub.R;
 
 public class HomeFragment extends Fragment {
-
-    public static final String TAG = "HomeFragment";
 
     private static final String ARG_TEXT = "argument.text";
 
