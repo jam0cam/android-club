@@ -10,18 +10,25 @@ import android.view.ViewGroup;
 
 import com.handy.androidclub.R;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
 public class CanvasFragment extends Fragment {
+
+    @Bind(R.id.canvas_view)
+    CanvasView mCanvasView;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_canvas, container, false);
+        View view = inflater.inflate(R.layout.fragment_canvas, container, false);
+        ButterKnife.bind(this, view);
+        return view;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        CanvasView canvasView = (CanvasView) view.findViewById(R.id.canvas_view);
-        canvasView.setPercentage(.8f);
-        canvasView.setColor(Color.WHITE, 0xFF8BC538, 0xFF8BC538);
+        mCanvasView.setPercentage(.8f);
+        mCanvasView.setColor(Color.WHITE, 0xFF8BC538, 0xFF8BC538);
     }
 }
