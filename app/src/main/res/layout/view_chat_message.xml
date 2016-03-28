@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp"
+    android:paddingBottom="2dp"
+    android:paddingTop="2dp"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:orientation="vertical"
+        android:background="#EEEEEE"
+        >
+
+        <TextView
+            android:id="@+id/chat_message_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textSize="10sp"
+            tools:text="Username"
+            />
+
+        <TextView
+            android:id="@+id/chat_message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            tools:text="A message someone sent about stuff that h\she want's to talk about. Sometimes it can go over two lines or more..."
+            />
+
+    </LinearLayout>
+</FrameLayout>

@@ -11,6 +11,11 @@
             android:icon="@drawable/ic_menu_number_1_black_24dp"
             android:title="Canvas"
             />
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@drawable/ic_menu_number_2_black_24dp"
+            android:title="Simple Chat"
+            />
     </group>
 
     <group android:visible="false">
