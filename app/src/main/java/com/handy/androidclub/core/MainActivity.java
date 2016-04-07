@@ -1,6 +1,7 @@
 package com.handy.androidclub.core;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,7 @@ import android.view.MenuItem;
 
 import com.google.android.gms.analytics.HitBuilders;
 import com.handy.androidclub.R;
+import com.handy.androidclub.camera.CameraFragment;
 import com.handy.androidclub.canvas.CanvasFragment;
 import com.handy.androidclub.chat.ChatFragment;
 
@@ -115,9 +117,18 @@ public class MainActivity extends AppCompatActivity
                 swapFragment(new ChatFragment());
                 mPreviousSelectedMenuItem = item.getItemId();
                 break;
+            case R.id.nav_camera:
+                swapFragment(new CameraFragment());
+                mPreviousSelectedMenuItem = item.getItemId();
+                break;
         }
         mDrawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     private void swapFragment(final Fragment newFragment) {
