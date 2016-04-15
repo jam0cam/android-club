@@ -21,6 +21,11 @@
             android:icon="@drawable/ic_menu_number_3_black_24dp"
             android:title="Camera"
             />
+        <item
+            android:id="@+id/nav_speech"
+            android:icon="@mipmap/ic_mic_white_48dp"
+            android:title="Speech To Text"
+            />
     </group>
 
     <group android:visible="false">
