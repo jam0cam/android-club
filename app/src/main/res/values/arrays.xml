@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="languages">
+        <item>English</item>
+        <item>Spanish</item>
+        <item>Cantonese</item>
+        <item>Mandarin</item>
+        <item>Czech</item>
+        <item>Russian</item>
+    </array>
+    <array name="language_keys">
+        <item>en-US</item>
+        <item>es-US</item>
+        <item>yue-Hant-HK</item>
+        <item>zh</item>
+        <item>cs-CZ</item>
+        <item>ru-RU</item>
+    </array>
+</resources>
