@@ -1,14 +1,11 @@
 package com.handy.androidclub.speech;
 
-/**
- * Created by jtse on 4/18/16.
- */
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 
 import com.handy.androidclub.R;
@@ -16,9 +13,6 @@ import com.handy.androidclub.R;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- * Created by jiatse on 4/10/16.
- */
 public class OptionsFragment extends DialogFragment {
 
     private static final String SELECTED_INDEX = "selected-index";
@@ -40,7 +34,6 @@ public class OptionsFragment extends DialogFragment {
         return fragment;
     }
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +53,7 @@ public class OptionsFragment extends DialogFragment {
     }
 
     @Override
+    @NonNull
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // Set the dialog title
