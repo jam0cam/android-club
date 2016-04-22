@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/main_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:layout_marginTop="-110dp"
+        >
+        <View
+            android:id="@+id/left_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            />
+        <View
+            android:id="@+id/left_center_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            />
+        <View
+            android:id="@+id/middle_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            />
+        <View
+            android:id="@+id/right_center_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            />
+        <View
+            android:id="@+id/right_view"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/table_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        ></TableLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:text="Welcome!"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/default_margin_4x"
+            android:layout_marginRight="@dimen/default_margin_4x"
+            android:layout_gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_padding"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/default_margin_2x"
+            android:layout_marginLeft="@dimen/default_margin_2x"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_gravity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Gravity confetti"
+        android:layout_above="@+id/btn_shooting"
+
+        />
+
+    <Button
+        android:id="@id/btn_shooting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Shooting confetti"
+        android:layout_above="@+id/btn_fireworks"
+        />
+
+    <Button
+        android:id="@id/btn_fireworks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fireworks"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>

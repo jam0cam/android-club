@@ -26,6 +26,11 @@
             android:icon="@mipmap/ic_mic_white_48dp"
             android:title="Speech To Text"
             />
+        <item
+            android:id="@+id/nav_particles"
+            android:icon="@mipmap/ic_flare_white_48dp"
+            android:title="Particles / Fireworks"
+            />
     </group>
 
     <group android:visible="false">
