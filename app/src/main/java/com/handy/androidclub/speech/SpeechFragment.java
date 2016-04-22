@@ -28,10 +28,8 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-/**
- * Created by jtse on 4/15/16.
- */
-public class SpeechFragment extends Fragment implements OptionsFragment.OptionsResponse{
+
+public class SpeechFragment extends Fragment implements OptionsFragment.OptionsResponse {
 
     private final int REQ_CODE_SPEECH_INPUT = 100;
 
@@ -111,7 +109,7 @@ public class SpeechFragment extends Fragment implements OptionsFragment.OptionsR
 
     /**
      * Receiving speech input
-     * */
+     */
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
