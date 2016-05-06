@@ -31,6 +31,11 @@
             android:icon="@mipmap/ic_flare_white_48dp"
             android:title="Particles / Fireworks"
             />
+        <item
+            android:id="@+id/nav_autocomplete"
+            android:icon="@mipmap/ic_map_white_48dp"
+            android:title="Address Autocomplete"
+            />
     </group>
 
     <group android:visible="false">

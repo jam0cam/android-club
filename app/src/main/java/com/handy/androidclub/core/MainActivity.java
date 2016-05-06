@@ -21,6 +21,7 @@ import com.handy.androidclub.camera.CameraFragment;
 import com.handy.androidclub.canvas.CanvasFragment;
 import com.handy.androidclub.chat.ChatFragment;
 import com.handy.androidclub.particles.ParticlesFragment;
+import com.handy.androidclub.places.AddressFragment;
 import com.handy.androidclub.speech.SpeechFragment;
 
 public class MainActivity extends AppCompatActivity
@@ -129,6 +130,10 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_particles:
                 swapFragment(new ParticlesFragment());
+                mPreviousSelectedMenuItem = item.getItemId();
+                break;
+            case R.id.nav_autocomplete:
+                swapFragment(new AddressFragment());
                 mPreviousSelectedMenuItem = item.getItemId();
                 break;
         }
